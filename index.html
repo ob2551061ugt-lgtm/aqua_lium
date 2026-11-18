@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ピクセル水族館</title>
+<meta name="description" content="ブラウザで遊べるドット絵の水族館運営ゲーム">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="hud">
+  <div class="brand">
+    <div class="logo">🐟</div>
+    <div>
+      <div id="aqName" class="aq-name">ピクセル水族館</div>
+      <div id="rankTitle" class="rank-title"></div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="ico">🪙</span><b id="coins">0</b></div>
+    <div class="stat"><span class="ico">👥</span><b id="visitors">0</b><small>人/分</small></div>
+    <div class="stat rank"><span class="ico">⭐</span>Rank <b id="rank">1</b><div class="bar"><i id="rankBar"></i></div></div>
+  </div>
+</header>
+
+<main>
+  <section id="view-aquarium" class="view active"></section>
+  <section id="view-shop" class="view"></section>
+  <section id="view-dex" class="view"></section>
+  <section id="view-friend" class="view"></section>
+  <section id="view-settings" class="view"></section>
+</main>
+
+<nav id="nav">
+  <button data-view="aquarium" class="active"><span>🐠</span>水族館</button>
+  <button data-view="shop"><span>🛒</span>ショップ</button>
+  <button data-view="dex"><span>📖</span>図鑑</button>
+  <button data-view="friend"><span>🤝</span>フレンド</button>
+  <button data-view="settings"><span>⚙️</span>設定</button>
+</nav>
+
+<div id="visit" class="hidden"></div>
+<div id="modal" class="hidden"><div class="modal-box"><button class="modal-close" aria-label="閉じる">✕</button><div id="modalBody"></div></div></div>
+<div id="dlg" class="hidden"><div class="modal-box narrow" id="dlgBox"></div></div>
+<div id="toasts"></div>
+
+<script src="js/data.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/codec.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
